@@ -2,17 +2,17 @@
 <!-- Copyright 2018 Endless Mobile, Inc. -->
 <component type="desktop">
   <id>com.sublimetext.three</id>
-  <name>Sublime Text</name>
+  <name>Sublime Text 3</name>
   <project_license>LicenseRef-proprietary=https://www.sublimetext.com/eula</project_license>
   <developer_name>Sublime HQ Pty Ltd</developer_name>
-  <summary>Sophisticated text editor for code, markup and prose</summary>
+  <summary>(Outdated) Sophisticated text editor for code, markup and prose</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <url type="homepage">https://www.sublimetext.com/</url>
   <url type="bugtracker">https://github.com/SublimeTextIssues/Core/issues</url>
   <url type="help">https://forum.sublimetext.com/</url>
   <launchable type="desktop-id">com.sublimetext.three.desktop</launchable>
   <description>
-    <p>A sophisticated text editor for code, markup and prose.</p>
+    <p>(Outdated) A sophisticated text editor for code, markup and prose.</p>
   </description>
   <screenshots>
     <screenshot type="default">
@@ -27,8 +27,41 @@
   <icon type="remote" height="128" width="128">https://raw.githubusercontent.com/flathub/com.sublimetext.three/master/com.sublimetext.three-128.png</icon>
   <icon type="remote" height="64" width="64">https://raw.githubusercontent.com/flathub/com.sublimetext.three/master/com.sublimetext.three-64.png</icon>
   <releases>
-    <release date="2019-10-01" version="3.2.2" />
-    <release date="2019-04-06" version="3.2.1" />
+    <release date="2019-10-01" version="3.2.2">
+      <description>
+        <p>3.2.2 (Build 3211)</p>
+        <ul>
+          <li>Mac: Added Notarization</li>
+          <li>Fixed a performance regression when moving the caret upwards in large files</li>
+          <li>Fixed a memory leak</li>
+          <li>Fixed not being able to swap lines down with the last line if it was empty</li>
+          <li>Git: Fixed includeIf handling in git config files not interpreting ~ relative paths correctly</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2019-04-06" version="3.2.1">
+      <description>
+        <p>3.2.1 (Build 3207)</p>
+        <ul>
+          <li>Various syntax highlighting improvements</li>
+          <li>Git: Git repositories at the top level of a users home directory are ignored for performance reasons. This can be changed via the allow_git_home_dir setting.</li>
+          <li>Git: Improved performance with a large number of git repositories in the side bar</li>
+          <li>Git: Fixed UTF8 BOMs not being handled correctly in .gitignore files</li>
+          <li>Fixed a crash in the Git repository handling</li>
+          <li>Improved file indexing behavior in some scenarios</li>
+          <li>Improved scrolling logic in some scenarios</li>
+          <li>Fixed block carets changing the way text selection works</li>
+          <li>Fixed swap_line_up and swap_line_down transforming tabs into spaces</li>
+          <li>Mac: Added a workaround for a MacOS issue with DisplayLink adapters</li>
+          <li>Linux: Fixed compatibility with old Linux distributions</li>
+          <li>Linux: Improved high dpi handling under KDE</li>
+          <li>Linux: Tweaked the way text scaling is handled</li>
+          <li>Linux: Fixed incorrect file ownership in the deb packages</li>
+          <li>API: Fixed an incompatibility with SublimeREPL</li>
+          <li>API: Fixed regression with phantoms interfering with home/end behavior</li>
+        </ul>
+      </description>
+    </release>
     <release date="2019-03-13" version="3.2">
       <description>
         <p>3.2 (BUILD 3200)</p>
