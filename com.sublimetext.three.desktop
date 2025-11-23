@@ -4,6 +4,7 @@ Type=Application
 Name=Sublime Text
 GenericName=Text Editor
 Comment=Sophisticated text editor for code, markup and prose
+Exec=subl --file-forwarding com.sublimetext.three @@ %F @@
 Terminal=false
 MimeType=text/plain;
 Icon=com.sublimetext.three
@@ -15,8 +16,10 @@ X-Flatpak=com.sublimetext.three
 
 [Desktop Action Window]
 Name=New Window
+Exec=/opt/sublime_text/sublime_text com.sublimetext.three -n
 OnlyShowIn=Unity;
 
 [Desktop Action Document]
 Name=New File
+Exec=/opt/sublime_text/sublime_text com.sublimetext.three --command new_file
 OnlyShowIn=Unity;

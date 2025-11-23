@@ -18,7 +18,8 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image type="source" caption="Screenshot of Sublime Text 3 with a project opened" >https://www.sublimetext.com/screenshots/3.0/linux.png</image>
+      <caption>Screenshot of Sublime Text 3 with a project opened</caption>
+      <image type="source">https://www.sublimetext.com/screenshots/3.0/linux.png</image>
     </screenshot>
   </screenshots>
   <categories>
