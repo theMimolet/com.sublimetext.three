@@ -12,9 +12,8 @@
   <url type="help">https://forum.sublimetext.com/</url>
   <launchable type="desktop-id">com.sublimetext.three.desktop</launchable>
   <description>
-    <p>A sophisticated text editor for code, markup and prose.</p>
-    <p>Sublime Text is a super fast and feature packed text and development editor. It supports many programming and markup languages, and functions as a powerful IDE for many of them. You'll love the slick user interface, extraordinary features and amazing performance.</p>
-    <p>NOTE: THIS VERSION OF SUBLIME TEXT IS OUTDATED. WORK IS ONGOING TO PACKAGE SUBLIME TEXT 4 FOR FLATHUB.</p>
+    <p>*Note*: This is Sublime Text 3. Sublime Text 4 is not yet available on Flathub. This has been packaged into a flatpak by the community and is not yet supported by Sublime HQ.</p>
+    <p>Sublime Text is a text editor with a clean and aesthetic interface. It also stands out for its many features and the large number of supported programming languages.</p>
   </description>
   <screenshots>
     <screenshot type="default">
