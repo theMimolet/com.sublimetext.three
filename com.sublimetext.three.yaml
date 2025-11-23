@@ -2,7 +2,7 @@ app-id: com.sublimetext.three
 command: subl
 
 runtime: org.freedesktop.Sdk
-runtime-version: '21.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 
 separate-locales: false
@@ -11,7 +11,6 @@ finish-args:
   - --share=network
   - --device=dri
   - --socket=x11
-  - --socket=fallback-x11
   - --socket=wayland
   - --talk-name=org.gnome.SettingsDaemon
   - --filesystem=host
@@ -24,7 +23,7 @@ add-extensions:
     add-ld-path: lib
 
   com.sublimetext.three.DevUtils:
-    version: '21.08'
+    version: '25.08'
     directory: utils
     subdirectories: false
     add-ld-path: lib
@@ -72,12 +71,6 @@ modules:
         url: https://download.sublimetext.com/files/sublime-text_build-3211_amd64.deb
         sha256: 8b2c6dc1178b1f0aa861e76b21719747c1587482c014e12db10ca4424b539c34
         size: 9835156
-      - type: extra-data
-        only-arches: [i386]
-        filename: sublime.deb
-        url: https://download.sublimetext.com/files/sublime-text_build-3211_i386.deb
-        sha256: 8d94aa6755eb09400a5936865a2a948ef8c89c7e93f6346e8da32e06f6e1cd97
-        size: 10000308
       - type: extra-data
         filename: Package Control.sublime-package
         url: http://packagecontrol.io/Package%20Control.sublime-package
