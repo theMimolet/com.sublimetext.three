@@ -14,7 +14,6 @@
   <description>
     <p>A sophisticated text editor for code, markup and prose.</p>
     <p>Sublime Text is a super fast and feature packed text and development editor. It supports many programming and markup languages, and functions as a powerful IDE for many of them. You'll love the slick user interface, extraordinary features and amazing performance.</p>
-    <p></p>
     <p>NOTE : THIS VERSION OF SUBLIME TEXT IS OUTDATED. WORK IS ONGOING TO PACKAGE SUBLIME TEXT 4 FOR FLATHUB.</p>
   </description>
   <screenshots>
@@ -86,13 +85,7 @@
           <li>In coordination with the new Git functionality, diffs can be calculated against HEAD or the index</li>
           <li>The git_diff_target setting controls base document source</li>
           <li>API methods View.set_reference_document() and View.reset_reference_document() allow controlling the diff</li>
-          <li>The following diff-related commands were added:
-            <ul>
-              <li>Next Modification</li>
-              <li>Previous Modification</li>
-              <li>Revert Modification</li>
-            </ul>
-          </li>
+          <li>The following diff-related commands were added: `Next Modification`, `Previous Modification` and `Revert Modification`</li>
           <li>Full inline diffs of each change can be displayed via the right-click context menu, or keyboard shortcuts</li>
           <li>Inline diff presentation can be changed by customizing a color scheme</li>
         </ul>
@@ -107,13 +100,7 @@
         </ul>
         <p>Themes/UI</p>
         <ul>
-          <li>Enhanced the .sublime-theme format:
-            <ul>
-              <li>Added variables support and associated revised JSON format with variables key</li>
-              <li>Added extends keyword to have one theme derive from another</li>
-              <li>Colors may be specified via CSS syntax</li>
-            </ul>
-          </li>
+          <li>Enhanced the .sublime-theme format: Added variables support and associated revised JSON format with variables key; added extends keyword to have one theme derive from another; colors may be specified via CSS syntax.</li>
           <li>Improved performance with large numbers of rules in a .sublime-theme</li>
           <li>Moved to GTK3</li>
           <li>Various high DPI fixes</li>
@@ -133,14 +120,7 @@
         </ul>
         <p>Syntax Highlighting</p>
         <ul>
-          <li>Many syntax highlighting improvements, including significant improvements to:
-            <ul>
-              <li>Clojure, with thanks to Nelo Mitranim</li>
-              <li>D</li>
-              <li>Go, with thanks to Nelo Mitranim</li>
-              <li>Lua, with thanks to Thomas Smith</li>
-            </ul>
-          </li>
+          <li>Many syntax highlighting improvements, including significant improvements to Clojure (with thanks to Nelo Mitranim), D, Go (with thanks to Nelo Mitranim), and Lua (with thanks to Thomas Smith).</li>
           <li>Fixed a crash that could occur when nesting embed patterns in .sublime-syntax files</li>
           <li>Syntax Tests: Allow syntax test files to have a UTF-8 BOM</li>
         </ul>
