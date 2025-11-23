@@ -5,14 +5,17 @@
   <name>Sublime Text 3</name>
   <project_license>LicenseRef-proprietary=https://www.sublimetext.com/eula</project_license>
   <developer_name>Sublime HQ Pty Ltd</developer_name>
-  <summary>(Outdated) Sophisticated text editor for code, markup and prose</summary>
+  <summary>Sophisticated text editor for code, markup and prose</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <url type="homepage">https://www.sublimetext.com/</url>
   <url type="bugtracker">https://github.com/SublimeTextIssues/Core/issues</url>
   <url type="help">https://forum.sublimetext.com/</url>
   <launchable type="desktop-id">com.sublimetext.three.desktop</launchable>
   <description>
-    <p>(Outdated) A sophisticated text editor for code, markup and prose.</p>
+    <p>A sophisticated text editor for code, markup and prose.</p>
+    <p>Sublime Text is a super fast and feature packed text and development editor. It supports many programming and markup languages, and functions as a powerful IDE for many of them. You'll love the slick user interface, extraordinary features and amazing performance.</p>
+    <p></p>
+    <p>NOTE : THIS VERSION OF SUBLIME TEXT IS OUTDATED. WORK IS ONGOING TO PACKAGE SUBLIME TEXT 4 FOR FLATHUB.</p>
   </description>
   <screenshots>
     <screenshot type="default">
