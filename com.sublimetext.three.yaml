@@ -71,11 +71,6 @@ modules:
         url: https://download.sublimetext.com/files/sublime-text_build-3211_amd64.deb
         sha256: 8b2c6dc1178b1f0aa861e76b21719747c1587482c014e12db10ca4424b539c34
         size: 9835156
-      - type: extra-data
-        filename: Package Control.sublime-package
-        url: http://packagecontrol.io/Package%20Control.sublime-package
-        sha256: 817937144c34c84c88cd43b85318b2656f9c3fac02f8f72cbc18360b2c26d139
-        size: 471460
       - type: file
         path: com.sublimetext.three.desktop
       - type: file
