@@ -2,7 +2,7 @@ app-id: com.sublimetext.three
 command: subl
 
 runtime: org.freedesktop.Sdk
-runtime-version: '25.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 
 separate-locales: false
@@ -10,8 +10,7 @@ finish-args:
   - --share=ipc
   - --share=network
   - --device=dri
-  - --socket=fallback-x11
-  - --socket=wayland
+  - --socket=x11
   - --talk-name=org.gnome.SettingsDaemon
   - --filesystem=host
   - --env=PATH=/app/utils/bin:/app/sublime_merge/bin:/app/bin:/usr/bin
@@ -23,7 +22,7 @@ add-extensions:
     add-ld-path: lib
 
   com.sublimetext.three.DevUtils:
-    version: '25.08'
+    version: "25.08"
     directory: utils
     subdirectories: false
     add-ld-path: lib
@@ -39,38 +38,29 @@ modules:
         commands:
           - FLATPAK_ID=com.sublimetext.three
           # Extract upstream package
-          - mkdir -p deb-package export/share
-          - ar p sublime.deb data.tar.xz | tar -xJf - -C deb-package
+          - mkdir -p extract export/share
+          - tar -xJf sublime.tar.xz -C extract
           # Install desktop entry and icons
-          - mv deb-package/usr/share/{applications,icons} export/share/
+          - mv extract/usr/share/{applications,icons} export/share/
           - rename sublime_text ${FLATPAK_ID} export/share/applications/*.desktop
           - rename sublime-text ${FLATPAK_ID} export/share/icons/hicolor/*/apps/*
           - desktop-file-edit --set-key=Exec --set-value='subl %F' --set-key=Icon
             --set-value=${FLATPAK_ID} export/share/applications/${FLATPAK_ID}.desktop
           # Install the app
-          - mv deb-package/opt/sublime_text ./
+          - mv extract/opt/sublime_text ./
           - ln -sr /app/sublime_merge/extra/sublime_merge ./sublime_merge
           # Cleanup
-          - rm -rf deb-package sublime.deb
+          - rm -rf extract sublime.tar.xz
       - type: script
         dest-filename: subl
         commands:
-          - PCFILE="Package Control.sublime-package"
-          - PCLOCATION="$HOME/.var/app/com.sublimetext.three/config/sublime-text-3/Installed
-            Packages"
-          - |
-            if ! test -f "$PCLOCATION/$PCFILE"; then
-                mkdir -p "$PCLOCATION"
-                cp "/app/extra/$PCFILE" "$PCLOCATION"
-            fi
-          - export LC_NUMERIC=C
           - exec /app/extra/sublime_text/sublime_text --fwdargv0 "$0" "$@"
       - type: extra-data
         only-arches: [x86_64]
-        filename: sublime.deb
-        url: https://download.sublimetext.com/files/sublime-text_build-3211_amd64.deb
-        sha256: 8b2c6dc1178b1f0aa861e76b21719747c1587482c014e12db10ca4424b539c34
-        size: 9835156
+        filename: sublime.tar.xz
+        url: https://download.sublimetext.com/sublime-text-3211-1-x86_64.pkg.tar.xz
+        sha256: 874a7d79dc5193654a3a41cfb91ed6b8c10730879bf5705550503f154f52c932
+        size: 11305980
       - type: file
         path: com.sublimetext.three.desktop
       - type: file
