@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Sublime Text
+Name=Sublime Text 3
 GenericName=Text Editor
 Comment=Sophisticated text editor for code, markup and prose
 Exec=subl --file-forwarding com.sublimetext.three @@ %F @@
